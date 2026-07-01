@@ -240,6 +240,7 @@ footer .sig{font-size:11px;color:var(--txt2);text-align:right;line-height:1.7}
 /*QLASER*/@property --qa{syntax:"<angle>";inherits:false;initial-value:0deg}#problem .q::before{display:none!important}#problem .qgrid{position:relative}#problem .qgrid::after{content:"";position:absolute;inset:-2px;border-radius:20px;padding:1.5px;background:conic-gradient(from var(--qa),transparent 0deg,transparent 296deg,rgba(63,174,106,.5) 330deg,#eafff2 350deg,rgba(63,174,106,.5) 360deg);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:qspin 7s linear infinite;pointer-events:none;z-index:2}@keyframes qspin{to{--qa:360deg}}/*NAVFIX*/nav .links a{color:rgba(255,255,255,.86)!important;font-weight:500!important}nav .links a:hover{color:#fff!important}
 /*HERO-LAYOUT*/#brainWrap{transform:translateX(10%)}@media(min-width:1000px){#hero .hero-inner{transform:translateX(-26px)}}
 /*HERO-FADE*/#hero .hero-inner{z-index:2}#hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(6,8,10,.95) 0%,rgba(6,8,10,.9) 20%,rgba(6,8,10,.52) 45%,rgba(6,8,10,0) 66%)}
+/*I18N*/.l-en{display:none}html.en .l-it{display:none}html.en .l-en{display:inline}.langtog{background:transparent;border:1px solid var(--line2);color:rgba(255,255,255,.86);font-size:11px;font-weight:700;letter-spacing:.08em;padding:5px 10px;border-radius:999px;cursor:pointer;font-family:inherit;margin-left:6px;transition:.2s}.langtog:hover{border-color:var(--forest);color:var(--forest)}
 </style>
 </head>
 <body>
@@ -248,15 +249,15 @@ footer .sig{font-size:11px;color:var(--txt2);text-align:right;line-height:1.7}
 <nav>
   <a class="brand" href="#hero"><b>ARPINGE · ENNOUS LAB</b><span>Meta-Intelligence</span></a>
   <div class="links">
-    <a href="#portfolio">Portfolio</a>
-    <a href="#reasoning">Reasoning Window</a>
-    <a href="#metalayer">Meta-Layer</a>
-    <a href="#measure">Measure</a>
-    <a href="#finance">Finance</a>
-    <a href="#disclosure">Reporting</a>
-    <a href="#governance">Governance</a>
+    <a href="#portfolio"><span class="l-it">Portafoglio</span><span class="l-en">Portfolio</span></a>
+    <a href="#reasoning"><span class="l-it">Ragionamento</span><span class="l-en">Reasoning Window</span></a>
+    <a href="#metalayer"><span class="l-it">Meta-Layer</span><span class="l-en">Meta-Layer</span></a>
+    <a href="#measure"><span class="l-it">Misura</span><span class="l-en">Measure</span></a>
+    <a href="#finance"><span class="l-it">Finanza</span><span class="l-en">Finance</span></a>
+    <a href="#disclosure"><span class="l-it">Reporting</span><span class="l-en">Reporting</span></a>
+    <a href="#governance"><span class="l-it">Governance</span><span class="l-en">Governance</span></a>
   </div>
-  <span class="demo-badge">DEMO · CONFIDENTIAL</span>
+  <button class="langtog" id="langTog" aria-label="lingua">EN</button><span class="demo-badge"><span class="l-it">DEMO · RISERVATO</span><span class="l-en">DEMO · CONFIDENTIAL</span></span>
 </nav>
 
 <!-- HERO -->
@@ -265,43 +266,45 @@ footer .sig{font-size:11px;color:var(--txt2);text-align:right;line-height:1.7}
   <div class="hero-inner">
   <div class="hero-brand rv">ARPINGE · ENNOUS LAB</div>
   <div class="kicker rv d1">Meta-Intelligence</div>
-  <h1 class="rv d1">One portfolio.<br>One governing intelligence.</h1>
-  <p class="lead sub rv d2" style="margin-top:22px;max-width:600px">Biomethane, solar, wind, storage, mobility, natural capital. Ennous reads every asset in one grammar, governs the models that watch them, and proves every number, from the plant to the financiers.</p>
-  <a href="#problem" class="scroll-hint rv d3">Explore</a>
+  <h1 class="rv d1"><span class="l-it">Un solo portafoglio.<br>Una sola intelligenza che governa.</span><span class="l-en">One portfolio.<br>One governing intelligence.</span></h1>
+  <p class="lead sub rv d2" style="margin-top:22px;max-width:600px"><span class="l-it">Biometano, solare, eolico, storage, mobilità, capitale naturale. Ennous legge ogni asset in una grammatica comune, governa i modelli che li sorvegliano, e prova ogni numero, dall'impianto ai finanziatori.</span><span class="l-en">Biomethane, solar, wind, storage, mobility, natural capital. Ennous reads every asset in one grammar, governs the models that watch them, and proves every number, from the plant to the financiers.</span></p>
+  <a href="#problem" class="scroll-hint rv d3"><span class="l-it">Esplora</span><span class="l-en">Explore</span></a>
   </div>
 </section>
 
 <!-- THE PROBLEM -->
 <section id="problem">
-  <div class="kicker rv">The problem</div>
-  <h2 class="rv d1">AI is arriving in every portfolio.<br>Few can govern it.</h2>
-  <p class="lead rv d2">Adopting a model is easy; governing it is hard. Before an investment committee, a financier or an auditor trusts a number, a handful of questions decide everything, and most owners, however expert in their own assets, cannot answer one of them.</p>
+  <div class="kicker rv"><span class="l-it">Il problema</span><span class="l-en">The problem</span></div>
+  <h2 class="rv d1"><span class="l-it">L'AI arriva in ogni portafoglio.<br>Pochi sanno governarla.</span><span class="l-en">AI is arriving in every portfolio.<br>Few can govern it.</span></h2>
+  <p class="lead rv d2"><span class="l-it">Adottare un modello è facile; governarlo è difficile.</span><span class="l-en">Adopting a model is easy; governing it is hard.</span> <span class="l-it">Prima che un comitato investimenti, un finanziatore o un auditor si fidi di un numero, poche domande decidono tutto, e la maggior parte dei proprietari, per quanto esperti dei propri asset, non sa rispondere a una di esse.</span><span class="l-en">Before an investment committee, a financier or an auditor trusts a number, a handful of questions decide everything, and most owners, however expert in their own assets, cannot answer one of them.</span></p>
     <div class="qgrid rv d2">
-    <div class="q"><div class="qn">Q1</div><p>Which model, and why this one?</p><span>Is it the best model for <em>this</em> decision, or simply the one already installed? Every question deserves the analysis that fits it, not a default.</span></div>
-    <div class="q"><div class="qn">Q2</div><p>When is it even worth it?</p><span>Not every decision needs a heavy model. When does AI add value over its cost and risk, and when is the simplest method the honest one?</span></div>
-    <div class="q"><div class="qn">Q3</div><p>All the signal, or the convenient part?</p><span>Is every useful source captured and brought to one comparable grammar, or only the data that was easy to reach?</span></div>
-    <div class="q"><div class="qn">Q4</div><p>Out of the black box?</p><span>Can the reasoning be opened and read, step by step, or is trusting the output an act of faith?</span></div>
-    <div class="q"><div class="qn">Q5</div><p>Efficiency and error, measured?</p><span>How much compute, and how much uncertainty around the answer, quantified and tracked, not assumed?</span></div>
-    <div class="q"><div class="qn">Q6</div><p>Who governs the models, and what emerges?</p><span>When many models run, what governs them? And what pattern surfaces across them that no single model, and no human query, could reach alone?</span></div>
+    <div class="q"><div class="qn">Q1</div><p><span class="l-it">Quale modello, e perché questo?</span><span class="l-en">Which model, and why this one?</span></p><span><span class="l-it">È il modello migliore per <em>questa</em> decisione, o solo quello già installato? Ogni domanda merita l'analisi che le si addice, non un default.</span><span class="l-en">Is it the best model for <em>this</em> decision, or simply the one already installed? Every question deserves the analysis that fits it, not a default.</span></span></div>
+    <div class="q"><div class="qn">Q2</div><p><span class="l-it">Quando conviene davvero?</span><span class="l-en">When is it even worth it?</span></p><span><span class="l-it">Non ogni decisione richiede un modello pesante. Quando l'AI aggiunge valore oltre il suo costo e rischio, e quando il metodo più semplice è quello onesto?</span><span class="l-en">Not every decision needs a heavy model. When does AI add value over its cost and risk, and when is the simplest method the honest one?</span></span></div>
+    <div class="q"><div class="qn">Q3</div><p><span class="l-it">Tutto il segnale, o la parte comoda?</span><span class="l-en">All the signal, or the convenient part?</span></p><span><span class="l-it">Ogni fonte utile è catturata e portata a una grammatica comune, o solo il dato facile da raggiungere?</span><span class="l-en">Is every useful source captured and brought to one comparable grammar, or only the data that was easy to reach?</span></span></div>
+    <div class="q"><div class="qn">Q4</div><p><span class="l-it">Fuori dalla scatola nera?</span><span class="l-en">Out of the black box?</span></p><span><span class="l-it">Il ragionamento si può aprire e leggere, passo per passo, o fidarsi dell'output è un atto di fede?</span><span class="l-en">Can the reasoning be opened and read, step by step, or is trusting the output an act of faith?</span></span></div>
+    <div class="q"><div class="qn">Q5</div><p><span class="l-it">Efficienza ed errore, misurati?</span><span class="l-en">Efficiency and error, measured?</span></p><span><span class="l-it">Quanto calcolo, e quanta incertezza sulla risposta, quantificati e tracciati, non assunti?</span><span class="l-en">How much compute, and how much uncertainty around the answer, quantified and tracked, not assumed?</span></span></div>
+    <div class="q"><div class="qn">Q6</div><p><span class="l-it">Chi governa i modelli, e cosa emerge?</span><span class="l-en">Who governs the models, and what emerges?</span></p><span><span class="l-it">Quando girano molti modelli, cosa li governa? E quale pattern emerge tra di essi che nessun singolo modello, e nessuna query umana, potrebbe raggiungere da solo?</span><span class="l-en">When many models run, what governs them? And what pattern surfaces across them that no single model, and no human query, could reach alone?</span></span></div>
   </div>
-  <p class="turn rv d3">Ennous is the brain that governs the brains, it chooses among models, gathers the signal, opens the reasoning, quantifies efficiency and error, and leaves a proof. <b>By construction.</b> Then it applies it where the assets are physical, distributed and full of exceptions: the infrastructure portfolio.</p>
+  <p class="turn rv d3"><span class="l-it">Ennous è il cervello che governa i cervelli: sceglie tra i modelli, raccoglie il segnale, apre il ragionamento, quantifica efficienza ed errore, e lascia una prova. <b>Per costruzione.</b> Poi lo applica dove gli asset sono fisici, distribuiti e pieni di eccezioni: il portafoglio infrastrutturale.</span><span class="l-en">Ennous is the brain that governs the brains, it chooses among models, gathers the signal, opens the reasoning, quantifies efficiency and error, and leaves a proof. <b>By construction.</b> Then it applies it where the assets are physical, distributed and full of exceptions: the infrastructure portfolio.</span></p>
 </section>
 
 <!-- OVERVIEW -->
 <section id="overview">
-  <div class="kicker rv">The portfolio in one view</div>
+  <div class="kicker rv"><span class="l-it">Il portafoglio in una vista</span><span class="l-en">The portfolio in one view</span></div>
   <p class="lead rv d2">
-    Arpinge owns physical infrastructure across Italy, biomethane, solar, wind, storage, mobility and natural capital. Each asset speaks its own language, SCADA, MRV, management systems, satellite,
+    <span class="l-it">Arpinge possiede infrastrutture fisiche in tutta Italia: biometano, solare, eolico, storage, mobilità e capitale naturale. Ogni asset parla la propria lingua, SCADA, MRV, gestionali, satellite,
+    e nessuno si confronta con gli altri. Ennous li legge in <strong>una grammatica comune</strong>, decide <strong class="gr">quale modello girare su ciascuno</strong>, e prova ogni numero, con
+    copertura calibrata e catena d'audit, pronto per <strong>GRESB, SFDR e la Tassonomia UE</strong>.</span><span class="l-en">Arpinge owns physical infrastructure across Italy, biomethane, solar, wind, storage, mobility and natural capital. Each asset speaks its own language, SCADA, MRV, management systems, satellite,
     and none of them compares to the others. Ennous reads them in <strong>one grammar</strong>, decides <strong class="gr">which model runs on each</strong>, and proves every number, with
-    calibrated coverage and an audit trail, ready for <strong>GRESB, SFDR and the EU Taxonomy</strong>.
+    calibrated coverage and an audit trail, ready for <strong>GRESB, SFDR and the EU Taxonomy</strong>.</span>
   </p>
   <div class="hero-stats rv d3">
-    <div class="hstat"><div class="n gr">~&euro;500M</div><div class="l">of infrastructure projects · founders Inarcassa, CIPAG, EPPI <span class="bdg real">public</span></div></div>
-    <div class="hstat"><div class="n">~100 MW</div><div class="l">AEER portfolio · wind, solar, biomethane, storage</div></div>
-    <div class="hstat"><div class="n cy">&euro;80M</div><div class="l">biomethane project financing · 4 plants · 16M Sm&sup3;/yr · 75k tCO&sub2;e/yr avoided</div></div>
-    <div class="hstat"><div class="n go">99/100</div><div class="l"><b>GRESB 2025 Sector Leader</b> · 5 stars · AEER 100/100</div></div>
-    <div class="hstat"><div class="n">~100</div><div class="l">intelligence engines <b>potentially activatable</b> · ~1 in 10 ignited per decision · figure estimated from an average of high-complexity projects</div></div>
-    <div class="hstat"><div class="n gr">SHA-256</div><div class="l">proof chain on every measure · <b>GRESB / SFDR / EU Taxonomy</b> ready · CNR-IAC &amp; Sapienza validated</div></div>
+    <div class="hstat"><div class="n gr">~&euro;500M</div><div class="l"><span class="l-it">di progetti infrastrutturali · soci Inarcassa, CIPAG, EPPI </span><span class="l-en">of infrastructure projects · founders Inarcassa, CIPAG, EPPI </span><span class="bdg real">public</span></div></div>
+    <div class="hstat"><div class="n">~100 MW</div><div class="l"><span class="l-it">portafoglio AEER · eolico, solare, biometano, storage</span><span class="l-en">AEER portfolio · wind, solar, biomethane, storage</span></div></div>
+    <div class="hstat"><div class="n cy">&euro;80M</div><div class="l"><span class="l-it">project financing biometano · 4 impianti · 16M Sm&sup3;/anno · 75k tCO&sub2;e/anno evitate</span><span class="l-en">biomethane project financing · 4 plants · 16M Sm&sup3;/yr · 75k tCO&sub2;e/yr avoided</span></div></div>
+    <div class="hstat"><div class="n go">99/100</div><div class="l"><span class="l-it"><b>GRESB 2025 Sector Leader</b> · 5 stelle · AEER 100/100</span><span class="l-en"><b>GRESB 2025 Sector Leader</b> · 5 stars · AEER 100/100</span></div></div>
+    <div class="hstat"><div class="n">~100</div><div class="l"><span class="l-it">motori d'intelligenza <b>potenzialmente attivabili</b> · ~1 su 10 acceso per decisione · stima da una media di progetti ad alta complessità</span><span class="l-en">intelligence engines <b>potentially activatable</b> · ~1 in 10 ignited per decision · figure estimated from an average of high-complexity projects</span></div></div>
+    <div class="hstat"><div class="n gr">SHA-256</div><div class="l"><span class="l-it">catena di prova su ogni misura · pronto <b>GRESB / SFDR / Tassonomia UE</b> · validato CNR-IAC e Sapienza</span><span class="l-en">proof chain on every measure · <b>GRESB / SFDR / EU Taxonomy</b> ready · CNR-IAC &amp; Sapienza validated</span></div></div>
   </div>
   <div class="disc rv d3">
     <b>Nature of the data.</b> Method: <b>simulate from origin</b>. Arpinge positions (~&euro;500M projects; &euro;80M biomethane project financing, 4 plants; AEER ~100 MW; GRESB 2025 Sector Leader 99/100)
@@ -318,20 +321,22 @@ footer .sig{font-size:11px;color:var(--txt2);text-align:right;line-height:1.7}
 
 <!-- PORTFOLIO MAP -->
 <section id="portfolio">
-  <div class="kicker rv">01 · The portfolio, alive</div>
-  <h2 class="rv d1">Assets apart. Signals comparable.</h2>
+  <div class="kicker rv"><span class="l-it">01 · Il portafoglio, vivo</span><span class="l-en">01 · The portfolio, alive</span></div>
+  <h2 class="rv d1"><span class="l-it">Asset distinti. Segnali confrontabili.</span><span class="l-en">Assets apart. Signals comparable.</span></h2>
   <p class="lead rv d2">
-    Twelve assets, six classes, across Italy. Today each asset lives in its own
+    <span class="l-it">Dodici asset, sei classi, in tutta Italia. Oggi ogni asset vive nel proprio
+    silo, SCADA, MRV, gestionali, satellite. Qui convergono in un'unica vista governata, con
+    una grammatica comune: valore, unità, provenienza, incertezza, tempo. Seleziona un asset.</span><span class="l-en">Twelve assets, six classes, across Italy. Today each asset lives in its own
     silo, SCADA, MRV, management systems, satellite. Here they converge in a single governed view, with
-    a common grammar: value, unit, provenance, uncertainty, time. Select an asset.
+    a common grammar: value, unit, provenance, uncertainty, time. Select an asset.</span>
   </p>
   <div class="map-wrap rv d2">
     <div class="map-panel"><canvas id="usMap"></canvas>
       <div class="legend">
-        <span class="lg"><i style="background:var(--forest)"></i>Biomethane</span>
-        <span class="lg"><i style="background:var(--cyan)"></i>Storage</span>
-        <span class="lg"><i style="background:var(--violet)"></i>Mobility</span>
-        <span class="lg"><i style="background:var(--gold)"></i>Solar &amp; wind</span>
+        <span class="lg"><i style="background:var(--forest)"></i><span class="l-it">Biometano</span><span class="l-en">Biomethane</span></span>
+        <span class="lg"><i style="background:var(--cyan)"></i><span class="l-it">Storage</span><span class="l-en">Storage</span></span>
+        <span class="lg"><i style="background:var(--violet)"></i><span class="l-it">Mobilità</span><span class="l-en">Mobility</span></span>
+        <span class="lg"><i style="background:var(--gold)"></i><span class="l-it">Solare ed eolico</span><span class="l-en">Solar &amp; wind</span></span>
       </div>
     </div>
     <div class="tract-detail"><div class="tchips" id="tChips"></div><div class="tract-card" id="tractCard"></div></div>
@@ -343,13 +348,16 @@ footer .sig{font-size:11px;color:var(--txt2);text-align:right;line-height:1.7}
 
 <!-- REASONING WINDOW -->
 <section id="reasoning">
-  <div class="kicker rv">02 · The Reasoning Window</div>
-  <h2 class="rv d1">You don't ask «what if».<br>You change the objective, and the intelligence recomposes itself.</h2>
+  <div class="kicker rv"><span class="l-it">02 · La Finestra di Ragionamento</span><span class="l-en">02 · The Reasoning Window</span></div>
+  <h2 class="rv d1"><span class="l-it">Non chiedi «e se».<br>Cambi l'obiettivo, e l'intelligenza si ricompone.</span><span class="l-en">You don't ask «what if».<br>You change the objective, and the intelligence recomposes itself.</span></h2>
   <p class="lead rv d2">
-    A sensitivity slider recomputes one fixed formula. This does not. Change the <strong>objective</strong> and a patent-pending
+    <span class="l-it">Uno slider di sensitività ricalcola una formula fissa. Questo no. Cambia l'<strong>obiettivo</strong> e uno strato
+    con brevetto in corso <strong>compone la propria pipeline d'analisi</strong> (L4-bis), <strong class="gr">accende solo il sottoinsieme
+    ottimale</strong> di ~100 motori e mette a riposo gli altri, così <strong>l'intelligenza gira a una frazione del costo</strong> mentre
+    <strong>la confidenza resta misurata</strong>. Scegli un obiettivo.</span><span class="l-en">A sensitivity slider recomputes one fixed formula. This does not. Change the <strong>objective</strong> and a patent-pending
     layer <strong>composes its own analysis pipeline</strong> (L4-bis), <strong class="gr">ignites only the optimal
     subset</strong> of ~100 engines and idles the rest, so <strong>intelligence runs at a fraction of the cost</strong> while
-    <strong>confidence stays measured</strong>. Pick an objective.
+    <strong>confidence stays measured</strong>. Pick an objective.</span>
   </p>
   <div class="obj-tabs rv d2" id="objTabs"></div>
   <div class="rw-stage rv d3">
@@ -375,10 +383,10 @@ footer .sig{font-size:11px;color:var(--txt2);text-align:right;line-height:1.7}
 <!-- META-NET -->
 <section id="metanet">
   <div class="kicker rv">02b · The meta-net</div>
-  <h2 class="rv d1">Every node is a network.</h2>
+  <h2 class="rv d1"><span class="l-it">Ogni nodo è una rete.</span><span class="l-en">Every node is a network.</span></h2>
   <div class="metanet rv d2">
     <div class="mh"><span class="t">Meta-net · every node is a network</span><span class="c" id="mnLabel"></span></div>
-    <div class="mn-hint">Change the objective, the network recomposes, and the number of engines with it:</div>
+    <div class="mn-hint"><span class="l-it">Cambia l'obiettivo: la rete si ricompone, e con essa il numero di motori:</span><span class="l-en">Change the objective, the network recomposes, and the number of engines with it:</span></div>
     <div class="mn-obj" id="mnObj"></div>
     <canvas id="mnCanvas"></canvas>
     <div class="mn-tip" id="mnTip"></div>
@@ -400,15 +408,15 @@ footer .sig{font-size:11px;color:var(--txt2);text-align:right;line-height:1.7}
 <!-- DECISION SIMULATOR -->
 <section id="simulator">
   <div class="kicker rv">02c · Decision Simulator</div>
-  <h2 class="rv d1">One engine. Many assets.</h2>
-  <p class="lead rv d2">The asset and the conditions change, the engine recomposes, and the reading changes with it. The confidence stays measured. Pick a scenario.</p>
+  <h2 class="rv d1"><span class="l-it">Un solo motore. Molti asset.</span><span class="l-en">One engine. Many assets.</span></h2>
+  <p class="lead rv d2"><span class="l-it">L'asset e le condizioni cambiano, il motore si ricompone, e con esso la lettura. La confidenza resta misurata. Scegli uno scenario.</span><span class="l-en">The asset and the conditions change, the engine recomposes, and the reading changes with it. The confidence stays measured. Pick a scenario.</span></p>
   <div class="sim-scen rv d2" id="simScen"></div>
   <div class="sim-out rv d3" id="simOut"></div>
 </section>
 
 <section id="metalayer">
-  <div class="kicker rv">03 · The Meta-Layer speaks</div>
-  <h2 class="rv d1">Conclusions no single model, and no human query, could reach.</h2>
+  <div class="kicker rv"><span class="l-it">03 · Il Meta-Layer parla</span><span class="l-en">03 · The Meta-Layer speaks</span></div>
+  <h2 class="rv d1"><span class="l-it">Conclusioni che nessun singolo modello, e nessuna query umana, potrebbero raggiungere.</span><span class="l-en">Conclusions no single model, and no human query, could reach.</span></h2>
   <p class="lead rv d2">
     These do not come out of a model. They come from watching <strong>which models win, and how that changes over
     time</strong>, meta-knowledge over the portfolio. Each carries the engine subset that produced it, a calibrated
@@ -423,25 +431,26 @@ footer .sig{font-size:11px;color:var(--txt2);text-align:right;line-height:1.7}
 
 <!-- ESTIMATE TO MEASURE -->
 <section id="measure">
-  <div class="kicker rv">04 · From estimate to measure</div>
-  <h2 class="rv d1">The number a financier can defend.</h2>
+  <div class="kicker rv"><span class="l-it">04 · Dalla stima alla misura</span><span class="l-en">04 · From estimate to measure</span></div>
+  <h2 class="rv d1"><span class="l-it">Il numero che un finanziatore può difendere.</span><span class="l-en">The number a financier can defend.</span></h2>
   <p class="lead rv d2">
-    Across the portfolio, value turns on asset-level readings, output, availability, degradation, risk. The platform renders each as a
-    <strong class="gr">measure</strong>, multi-source fusion, explicit uncertainty, audit trail, not a dashboard number. The same layer makes a GRESB or SFDR KPI equally defensible: <strong>evidence, not declaration</strong>.
+    <span class="l-it">Nel portafoglio, il valore dipende da letture a livello di asset: output, disponibilità, degrado, rischio. La piattaforma rende ciascuna una
+    <strong class="gr">misura</strong>: fusione multi-sorgente, incertezza esplicita, catena d'audit, non un numero da cruscotto. Lo stesso strato rende un KPI GRESB o SFDR ugualmente difendibile: <strong>evidenza, non dichiarazione</strong>.</span><span class="l-en">Across the portfolio, value turns on asset-level readings, output, availability, degradation, risk. The platform renders each as a
+    <strong class="gr">measure</strong>, multi-source fusion, explicit uncertainty, audit trail, not a dashboard number. The same layer makes a GRESB or SFDR KPI equally defensible: <strong>evidence, not declaration</strong>.</span>
   </p>
   <div class="em-grid rv d2">
     <div class="em">
-      <h4>Plant output · availability, degradation</h4>
-      <div class="before">SCADA dashboard <span style="font-size:13px">· reading</span></div>
-      <div class="arrow">↓ in a pilot, measured by the engine</div>
-      <div class="after">per asset <small>· calibrated band · provenance · drift-watched</small></div>
+      <h4><span class="l-it">Output impianto · disponibilità, degrado</span><span class="l-en">Plant output · availability, degradation</span></h4>
+      <div class="before"><span class="l-it">cruscotto SCADA <span style="font-size:13px">· lettura</span></span><span class="l-en">SCADA dashboard <span style="font-size:13px">· reading</span></span></div>
+      <div class="arrow"><span class="l-it">↓ in un pilota, misurato dal motore</span><span class="l-en">↓ in a pilot, measured by the engine</span></div>
+      <div class="after"><span class="l-it">per asset <small>· banda calibrata · provenienza · sorvegliato per drift</small></span><span class="l-en">per asset <small>· calibrated band · provenance · drift-watched</small></span></div>
       <p>Biomethane yield, PV availability, the readings behind the DSCR and the expected revenue, each rendered a measure with uncertainty rather than a dashboard figure. <span class="bdg val">to validate on Arpinge data</span></p>
     </div>
     <div class="em">
-      <h4>GRESB / SFDR KPI · declaration → evidence</h4>
-      <div class="before">self-declared <span style="font-size:13px">· estimate</span></div>
-      <div class="arrow">↓ engine layer</div>
-      <div class="after">computed <small>· band · provenance · illustrative</small></div>
+      <h4><span class="l-it">KPI GRESB / SFDR · dichiarazione → evidenza</span><span class="l-en">GRESB / SFDR KPI · declaration → evidence</span></h4>
+      <div class="before"><span class="l-it">auto-dichiarato <span style="font-size:13px">· stima</span></span><span class="l-en">self-declared <span style="font-size:13px">· estimate</span></span></div>
+      <div class="arrow"><span class="l-it">↓ strato dei motori</span><span class="l-en">↓ engine layer</span></div>
+      <div class="after"><span class="l-it">calcolato <small>· banda · provenienza · illustrativo</small></span><span class="l-en">computed <small>· band · provenance · illustrative</small></span></div>
       <p>tCO&sub2;e avoided, an SFDR or GRESB KPI, a declaration today; the same engine makes it a computable measure with provenance, what GRESB and the EU Taxonomy require. Verified, not asserted. <span class="bdg sim">simulated from origin</span></p>
     </div>
   </div>
@@ -449,36 +458,38 @@ footer .sig{font-size:11px;color:var(--txt2);text-align:right;line-height:1.7}
 
 <!-- FINANCE -->
 <section id="finance">
-  <div class="kicker rv">04b · Finance</div>
-  <h2 class="rv d1">From the physical datum,<br>to the number a lender trusts.</h2>
-  <p class="lead rv d2">Every economic figure <strong class="gr">inherits the proof chain of the physical datum that generates it</strong>. The DSCR, the expected revenue, the climate sensitivity of the margin, each carries the calibrated band of the yield and availability behind it. Investment decisions stay with the committee; the numbers become defensible to the financiers.</p>
+  <div class="kicker rv"><span class="l-it">04b · Finanza</span><span class="l-en">04b · Finance</span></div>
+  <h2 class="rv d1"><span class="l-it">Dal dato fisico,<br>al numero di cui un finanziatore si fida.</span><span class="l-en">From the physical datum,<br>to the number a lender trusts.</span></h2>
+  <p class="lead rv d2"><span class="l-it">Ogni cifra economica <strong class="gr">eredita la catena di prova del dato fisico che la genera</strong>. Il DSCR, i ricavi attesi, la sensitività climatica del margine, ciascuno porta la banda calibrata della resa e disponibilità che ha dietro. Le decisioni di investimento restano al comitato; i numeri diventano difendibili verso i finanziatori.</span><span class="l-en">Every economic figure <strong class="gr">inherits the proof chain of the physical datum that generates it</strong>. The DSCR, the expected revenue, the climate sensitivity of the margin, each carries the calibrated band of the yield and availability behind it. Investment decisions stay with the committee; the numbers become defensible to the financiers.</span></p>
   <div class="fin-grid rv d3">
     <div class="fin-card">
-      <div class="fk">Rolling DSCR · biomethane project financing</div>
+      <div class="fk"><span class="l-it">DSCR rolling · project financing biometano</span><span class="l-en">Rolling DSCR · biomethane project financing</span></div>
       <canvas id="dscrChart"></canvas>
       <div class="fnote">12-quarter rolling, against the <b>1.20&times; covenant</b>. Each point traces to the plant output that produced it. <span class="bdg sim">simulated from origin</span></div>
     </div>
     <div class="fin-col">
-      <div class="fin-stat"><div class="fv gr">1.38&times;</div><div class="fl">current DSCR · above the 1.20&times; covenant</div></div>
-      <div class="fin-stat"><div class="fv">&euro;80M</div><div class="fl">project financing · UniCredit + Banca Ifigest · 4 plants</div></div>
-      <div class="fin-stat"><div class="fv cy">&minus;6%</div><div class="fl">margin sensitivity · one dry-season stress</div></div>
+      <div class="fin-stat"><div class="fv gr">1.38&times;</div><div class="fl"><span class="l-it">DSCR attuale · sopra il covenant 1,20&times;</span><span class="l-en">current DSCR · above the 1.20&times; covenant</span></div></div>
+      <div class="fin-stat"><div class="fv">&euro;80M</div><div class="fl"><span class="l-it">project financing · UniCredit + Banca Ifigest · 4 impianti</span><span class="l-en">project financing · UniCredit + Banca Ifigest · 4 plants</span></div></div>
+      <div class="fin-stat"><div class="fv cy">&minus;6%</div><div class="fl"><span class="l-it">sensitività margine · uno stress di stagione secca</span><span class="l-en">margin sensitivity · one dry-season stress</span></div></div>
     </div>
   </div>
-  <p class="disc rv d3" style="max-width:none">Financial figures are illustrative and inherit the simulated physical data; they are not a valuation, a forecast or an offer. Investment appraisal remains outside the platform's perimeter.</p>
+  <p class="disc rv d3" style="max-width:none"><span class="l-it">Le cifre finanziarie sono illustrative ed ereditano i dati fisici simulati; non sono una valutazione, una previsione o un'offerta. La valutazione di investimento resta fuori dal perimetro della piattaforma.</span><span class="l-en">Financial figures are illustrative and inherit the simulated physical data; they are not a valuation, a forecast or an offer. Investment appraisal remains outside the platform's perimeter.</span></p>
 </section>
 
 <!-- DISCLOSURE -->
 <section id="disclosure">
-  <div class="kicker rv">05 · The report, generated</div>
-  <h2 class="rv d1">An evidence pack, not a spreadsheet.</h2>
+  <div class="kicker rv"><span class="l-it">05 · Il report, generato</span><span class="l-en">05 · The report, generated</span></div>
+  <h2 class="rv d1"><span class="l-it">Un pacchetto di prove, non un foglio di calcolo.</span><span class="l-en">An evidence pack, not a spreadsheet.</span></h2>
   <p class="lead rv d2">
-    Arpinge reports to its financiers and to <strong>GRESB</strong>, <strong>SFDR</strong> and the <strong>EU Taxonomy</strong>, and is a 2025 GRESB Sector Leader. The same proof chain
+    <span class="l-it">Arpinge rendiconta ai suoi finanziatori e verso <strong>GRESB</strong>, <strong>SFDR</strong> e la <strong>Tassonomia UE</strong>, ed è GRESB Sector Leader 2025. La stessa catena di prova
+    che sostiene ogni misura <strong class="gr">compila da sé il report</strong>: gli indicatori GRESB e le
+    metriche SFDR / Tassonomia, con l'hash finale come firma di deposito. Poiché l'audit è preso al <strong>passo di selezione</strong>, ogni numero è ripercorribile per costruzione. Il metodo alla base è validato con <strong>CNR-IAC</strong> e <strong>Sapienza</strong>, rilevante per audit indipendente e revisione dei finanziatori.</span><span class="l-en">Arpinge reports to its financiers and to <strong>GRESB</strong>, <strong>SFDR</strong> and the <strong>EU Taxonomy</strong>, and is a 2025 GRESB Sector Leader. The same proof chain
     that backs each measure <strong class="gr">compiles the report itself</strong>, the GRESB indicators and the
-    SFDR / Taxonomy metrics, with the final hash as a filing signature. Because the audit is taken at the <strong>step of selection</strong>, every number is retraceable by design. The underlying method is validated with <strong>CNR-IAC</strong> and <strong>Sapienza</strong>, relevant for independent audit and lender review.
+    SFDR / Taxonomy metrics, with the final hash as a filing signature. Because the audit is taken at the <strong>step of selection</strong>, every number is retraceable by design. The underlying method is validated with <strong>CNR-IAC</strong> and <strong>Sapienza</strong>, relevant for independent audit and lender review.</span>
   </p>
   <div class="gen-wrap rv d2">
     <div class="gen-top">
-      <h3>GRESB + SFDR + EU Taxonomy · auto-compiled from the proof chain</h3>
+      <h3><span class="l-it">GRESB + SFDR + Tassonomia UE · auto-compilato dalla catena di prova</span><span class="l-en">GRESB + SFDR + EU Taxonomy · auto-compiled from the proof chain</span></h3>
       <button class="gen-btn" id="genBtn" onclick="generateDisclosure()">▶ Generate disclosure</button>
     </div>
     <div class="leap" id="leap"></div>
@@ -491,11 +502,12 @@ footer .sig{font-size:11px;color:var(--txt2);text-align:right;line-height:1.7}
 
 <!-- GOVERNANCE + PATH -->
 <section id="governance">
-  <div class="kicker rv">06 · The boundaries</div>
-  <h2 class="rv d1">The platform measures.<br>The decisions stay with Arpinge.</h2>
+  <div class="kicker rv"><span class="l-it">06 · I confini</span><span class="l-en">06 · The boundaries</span></div>
+  <h2 class="rv d1"><span class="l-it">La piattaforma misura.<br>Le decisioni restano ad Arpinge.</span><span class="l-en">The platform measures.<br>The decisions stay with Arpinge.</span></h2>
   <p class="lead rv d2">
-    It measures, estimates, flags and documents. It does not allocate capital, value assets or replace the
-    investment committee. It does not replace Arpinge's process, it renders it <strong>usable, recurring and verifiable</strong>.
+    <span class="l-it">Misura, stima, segnala e documenta. Non alloca capitale, non valuta gli asset, non sostituisce il
+    comitato investimenti. Non sostituisce il processo di Arpinge: lo rende <strong>usabile, ricorrente e verificabile</strong>.</span><span class="l-en">It measures, estimates, flags and documents. It does not allocate capital, value assets or replace the
+    investment committee. It does not replace Arpinge's process, it renders it <strong>usable, recurring and verifiable</strong>.</span>
   </p>
   <div class="gov rv d2">
     <div class="gcol"><h3>The platform does</h3><div class="sub">working measurement layer</div>
@@ -520,31 +532,36 @@ footer .sig{font-size:11px;color:var(--txt2);text-align:right;line-height:1.7}
 
 <!-- ROADMAP + COOPERATION -->
 <section id="roadmap">
-  <div class="kicker rv">07 · The path</div>
-  <h2 class="rv d1">A 180-day pilot to prove the whole,<br>in miniature.</h2>
-  <p class="lead rv d2">The first version runs on a representative slice of the portfolio, chosen with your teams so it carries, in miniature, every challenge of the whole: several asset classes, the monitoring and risk range, the GRESB and SFDR load. Prove the governing layer there, in about 180 days, and it would extend with confidence.</p>
+  <div class="kicker rv"><span class="l-it">07 · Il percorso</span><span class="l-en">07 · The path</span></div>
+  <h2 class="rv d1"><span class="l-it">Un pilota di 180 giorni per provare il tutto,<br>in miniatura.</span><span class="l-en">A 180-day pilot to prove the whole,<br>in miniature.</span></h2>
+  <p class="lead rv d2"><span class="l-it">La prima versione gira su una porzione rappresentativa del portafoglio, scelta con i vostri team così da portare, in miniatura, ogni sfida del tutto: diverse classi di asset, il ventaglio di monitoraggio e rischio, il carico GRESB e SFDR. Prova lì lo strato che governa, in circa 180 giorni, e si estenderebbe con fiducia.</span><span class="l-en">The first version runs on a representative slice of the portfolio, chosen with your teams so it carries, in miniature, every challenge of the whole: several asset classes, the monitoring and risk range, the GRESB and SFDR load. Prove the governing layer there, in about 180 days, and it would extend with confidence.</span></p>
   <div class="roadmap-track rv d3">
-    <div class="rphase"><div class="rp-n">1</div><div class="rp-t">Pilot · a representative slice</div><div class="rp-d">The governing layer, live across biomethane, solar and one more class, carrying every issue of the whole. Evidence gate.</div><div class="rp-when">~180 days</div></div>
-    <div class="rphase"><div class="rp-n">2</div><div class="rp-t">Extend · more classes &amp; sites</div><div class="rp-d">Proven there, it extends to more asset classes and sites, on Arpinge's own data.</div><div class="rp-when">next</div></div>
-    <div class="rphase"><div class="rp-n">3</div><div class="rp-t">The whole portfolio</div><div class="rp-d">All classes, across the ~&euro;500M book. One governed layer.</div><div class="rp-when">scale</div></div>
-    <div class="rphase"><div class="rp-n">4</div><div class="rp-t">Standing venture</div><div class="rp-d">A standing capability, validated with CNR-IAC and Sapienza. Arpinge · Ennous Lab.</div><div class="rp-when">horizon</div></div>
+    <div class="rphase"><div class="rp-n">1</div><div class="rp-t"><span class="l-it">Pilota · una porzione rappresentativa</span><span class="l-en">Pilot · a representative slice</span></div><div class="rp-d">The governing layer, live across biomethane, solar and one more class, carrying every issue of the whole. Evidence gate.</div><div class="rp-when">~180 days</div></div>
+    <div class="rphase"><div class="rp-n">2</div><div class="rp-t"><span class="l-it">Estensione · più classi e siti</span><span class="l-en">Extend · more classes &amp; sites</span></div><div class="rp-d">Proven there, it extends to more asset classes and sites, on Arpinge's own data.</div><div class="rp-when">next</div></div>
+    <div class="rphase"><div class="rp-n">3</div><div class="rp-t"><span class="l-it">L'intero portafoglio</span><span class="l-en">The whole portfolio</span></div><div class="rp-d">All classes, across the ~&euro;500M book. One governed layer.</div><div class="rp-when">scale</div></div>
+    <div class="rphase"><div class="rp-n">4</div><div class="rp-t"><span class="l-it">Venture permanente</span><span class="l-en">Standing venture</span></div><div class="rp-d">A standing capability, validated with CNR-IAC and Sapienza. Arpinge · Ennous Lab.</div><div class="rp-when">horizon</div></div>
   </div>
   <div class="endcap rv d3">
     <h3>Arpinge · Ennous Lab</h3>
-    <p>Ennous is a governing intelligence over many models. Its value is <strong>holistic</strong>: the meta-layer reads patterns across the portfolio that no single asset, and no single tool, can. So a first engagement is not one model on one plant. It runs the full governing layer on a small, <strong>representative slice</strong> of the portfolio: a varied, cross-class set of assets that still reflects the whole. A hologram of the portfolio, governed in miniature.</p>
-    <p>Because the part reflects the whole, the governance is real on day one, on Arpinge's own data, with an <strong>evidence gate at every step</strong>. Should it prove its value there, the same layer could extend to more classes and to the full book, as a standing capability or a joint venture, validated with CNR-IAC and Sapienza. <strong class="gr">The measure of success is simple: whether every number, from the plant to the financier, becomes measured, governed and provable.</strong></p>
-    <div class="cta-row"><a class="cta" href="mailto:info@ecobubble.it?subject=Arpinge%20%C2%B7%20Ennous%20Lab%20%E2%80%94%20pilot">Scope the first slice, together &rarr;</a><a class="cta cta-ghost" href="https://calendly.com/nicola-nescatelli/30min">Book a call</a><span class="cta-note">Built on your real data, governed end to end, with an evidence gate at each step.</span></div>
+    <p><span class="l-it">Ennous è un'intelligenza che governa molti modelli. Il suo valore è <strong>olistico</strong>: il meta-layer legge pattern nel portafoglio che nessun singolo asset, e nessun singolo strumento, può cogliere. Quindi un primo ingaggio non è un modello su un impianto. Fa girare l'intera rete che governa su una piccola porzione <strong>rappresentativa</strong> del portafoglio: un insieme vario e trasversale di asset che riflette comunque il tutto. Un ologramma del portafoglio, governato in miniatura.</span><span class="l-en">Ennous is a governing intelligence over many models. Its value is <strong>holistic</strong>: the meta-layer reads patterns across the portfolio that no single asset, and no single tool, can. So a first engagement is not one model on one plant. It runs the full governing layer on a small, <strong>representative slice</strong> of the portfolio: a varied, cross-class set of assets that still reflects the whole. A hologram of the portfolio, governed in miniature.</span></p>
+    <p><span class="l-it">Poiché la parte riflette il tutto, la governance è reale dal primo giorno, sui dati di Arpinge, con un <strong>gate di evidenza a ogni passo</strong>. Se lì dimostra il suo valore, la stessa rete potrebbe estendersi a più classi e all'intero book, come capacità permanente o joint venture, validata con CNR-IAC e Sapienza. <strong class="gr">La misura del successo è semplice: se ogni numero, dall'impianto al finanziatore, diventa misurato, governato e provabile.</strong></span><span class="l-en">Because the part reflects the whole, the governance is real on day one, on Arpinge's own data, with an <strong>evidence gate at every step</strong>. Should it prove its value there, the same layer could extend to more classes and to the full book, as a standing capability or a joint venture, validated with CNR-IAC and Sapienza. <strong class="gr">The measure of success is simple: whether every number, from the plant to the financier, becomes measured, governed and provable.</strong></span></p>
+    <div class="cta-row"><a class="cta" href="mailto:info@ecobubble.it?subject=Arpinge%20%C2%B7%20Ennous%20Lab"><span class="l-it">Definiamo la prima porzione, insieme &rarr;</span><span class="l-en">Scope the first slice, together &rarr;</span></a><a class="cta cta-ghost" href="https://calendly.com/nicola-nescatelli/30min"><span class="l-it">Prenota una call</span><span class="l-en">Book a call</span></a><span class="cta-note"><span class="l-it">Costruito sui vostri dati reali, governato end-to-end, con un gate di evidenza a ogni passo.</span><span class="l-en">Built on your real data, governed end to end, with an evidence gate at each step.</span></span></div>
   </div>
 </section>
 
 <footer>
   <div class="fin">
-    <p><b>Arpinge · Ennous.</b> Demonstration prepared for the Arpinge group. Positions
+    <p><span class="l-it"><b>Arpinge · Ennous.</b> Dimostrazione preparata per il gruppo Arpinge. Le posizioni
+    (soci Inarcassa, CIPAG, EPPI; ~&euro;500M di progetti; &euro;80M project financing biometano, 4 impianti; AEER ~100 MW; GRESB 2025 Sector Leader 99/100)
+    derivano da fonti pubbliche. Telemetria degli asset, punteggi di gating, insight del meta-layer e
+    report sono <b>simulati dall'origine</b> e riproducono il comportamento progettato del sistema, secondo l'architettura
+    depositata (brevetto 11.E2118.12.IT.7, pending, + 5 estensioni tecniche, candidate). Nulla qui è una misura certificata,
+    consulenza finanziaria o un'offerta. La piattaforma misura e stima; le decisioni restano agli organi di governo di Arpinge.</span><span class="l-en"><b>Arpinge · Ennous.</b> Demonstration prepared for the Arpinge group. Positions
     (founders Inarcassa, CIPAG, EPPI; ~&euro;500M projects; &euro;80M biomethane project financing, 4 plants; AEER ~100 MW; GRESB 2025 Sector Leader 99/100)
     are drawn from public sources. Asset telemetry, gating scores, meta-layer insights and
     reports are <b>simulated from origin</b> and reproduce the designed behaviour of the system, per the deposited
     architecture (patent 11.E2118.12.IT.7, pending, + 5 technical extensions, candidate). Nothing herein is a certified
-    measure, financial advice or an offer. The platform measures and estimates; decisions remain with Arpinge's governing bodies.</p>
+    measure, financial advice or an offer. The platform measures and estimates; decisions remain with Arpinge's governing bodies.</span></p>
     <div class="sig">ENNOUS · Meta-Intelligence Lab<br>Plant &amp; Geo-Driven Systems<br><span style="color:var(--txt3)">v1.0 · 2026</span></div>
   </div>
 </footer>
@@ -1001,6 +1018,14 @@ function drawDSCR(){const cv=document.getElementById('dscrChart');if(!cv||!cv.cl
 window.addEventListener('load',()=>setTimeout(drawDSCR,300));
 window.addEventListener('resize',()=>{try{drawDSCR();}catch(e){}});
 if('IntersectionObserver' in window){const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)drawDSCR();}),{threshold:.2});const t=document.getElementById('dscrChart');if(t)o.observe(t);}
+</script>
+<script>
+function setLang(l){document.documentElement.classList.toggle('en',l==='en');try{localStorage.ennousLang=l;}catch(e){}
+ var b=document.getElementById('langTog');if(b)b.textContent=l==='en'?'IT':'EN';
+ if(window.renderI18n){try{renderI18n();}catch(e){}}}
+(function(){var b=document.getElementById('langTog');if(b)b.onclick=function(){setLang(document.documentElement.classList.contains('en')?'it':'en');};
+ var saved='it';try{saved=localStorage.ennousLang||'it';}catch(e){}setLang(saved);})();
+window.LANG=function(){return document.documentElement.classList.contains('en')?'en':'it';};
 </script>
 </body>
 </html>
